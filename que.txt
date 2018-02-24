@@ -1,0 +1,1384 @@
+Match the following: Set A 1. Columns 2. Rows 3. NewRow() 4. Select() Set B a. Gets an array of DataRow objects b. Gets the collection of fields that belong to table c. Gets the collection of records that belong to table d. Creates a new DataRow with same schema as the table
+Option-1:	1 - c, 2 - a, 3 - d, 4 - b
+Option-2:	1 - b, 2 - c, 3 - d, 4 - a
+Option-3:	1 - b, 2 - d, 3 - c, 4 - a
+Option-4:	1 - c, 2 - b, 3 - d, 4 - a
+
+Which of the following constructors are exposed by SqlCommand class?
+Option-1:	SqlCommand(string commandText)
+Option-2:	SqlCommand(string commandText, SqlTransaction trans, SqlConnection con)
+Option-3:	SqlCommand(string commandText, SqlConnection con, SqlTransaction trans)
+Option-4:	SqlCommand(string commandText, SqlTransaction trans)
+
+Identify the true/false statements related to the connected architecture in .NET: 1) Application interacts with the data source through SQL statements using Connection and Command object. 2) After the execution of Command, the result set is fetched in a DataReader object.
+Option-1:	Statement 1 is True. Statement 2 is False.
+Option-2:	Statement 1 is False. Statement 2 is True.
+Option-3:	Both are True.
+Option-4:	Both are False.
+
+Raksha is developing an ADO.NET application using connected architecture. She is fetching the data in DataReader. Which of the following property she should use to retrieve number of columns available in the current row?
+Option-1:	GetOrdinal
+Option-2:	FieldCount
+Option-3:	ColumnCount
+Option-4:	Item
+
+Abhay is developing a Windows Form application using Connected Architecture. He has written a stored procedure to retrieve employee details. Assuming that there is a valid connection object named connection, identify the code snippet Abhay should use to call the stored procedure?
+Option-1:	SqlCommand command=new SqlCommand("GetEmployees",connection); command.CommandType=CommandType.StoredProcedure;
+Option-2:	SqlCommand command=new SqlCommand("GetEmployees", connection); command.CommandType=CommandType.Text;
+Option-3:	SqlCommand command=new SqlCommand("SELECT * FROM Employees", connection); command.CommandType=CommandType.StoredProcedure;
+Option-4:	SqlCommand command=new SqlCommand("SELECT * FROM Employees", connection); command.CommandType=CommandType.Text;
+
+
+Mohan is developing a Windows Form application using Disconnected Architecture. He has written following code to fetch the customer records in the DataSet: SqlConnection connection=new SqlConnection("Valid connection string"); SqlDataAdapter customerAdapter=new SqlDataAdapter("Select * From Customers", connection); customerAdapter.MissingSchemaAction=MissingSchemaAction.AddWithKey; DataSet dsCustomer=new DataSet(); customerAdapter.Fill(dsCustomer, "Customer"); Manoj wants to write contents of Customer data table to an XML file. Identify the code snippet to implement this functionality.
+Option-1:	dsCustomer.WriteXml(@"CustomerRecords.xml");
+Option-2:	dsCustomer.WriteXmlRecords(@"CustomerRecords.xml");
+Option-3:	dsCustomer.ReadXml(@"CustomerRecords.xml");
+Option-4:	dsEmployee.GetXml(@"CustomerRecords.xml");
+
+
+Ravi is developing a Windows Form application using Disconnected Architecture. He has written following code to add a employee record in the DataSet: SqlConnection connection=new SqlConnection("Valid connection string"); SqlDataAdapter employeeAdapter=new SqlDataAdapter("Select * From Employee", connection); employeeAdapter.MissingSchemaAction=MissingSchemaAction.AddWithKey; DataSet dsEmployee=new DataSet(); employeeAdapter.Fill(dsEmployee, "Employee"); DataRow newEmployee=dsEmployee.Tables["Employee"].NewRow(); //code to accept values from the user and add it to DataRow. dsEmployee.Tables["Employee"].Rows.Add(newEmployee); Identify the code snippet to add this row to the employee table in the database.
+Option-1:	SqlCommandBuilder cmbEmployee=new SqlCommandBuilder(); employeeAdapter.Update();
+Option-2:	SqlCommandBuilder cmbEmployee=new SqlCommandBuilder(); employeeAdapter.Update(dsEmployee.Tables["Employee"]);
+Option-3:	SqlCommandBuilder cmbEmployee=new SqlCommandBuilder(employeeAdapter); employeeAdapter.Update(dsEmployee.Tables["Employee"]);
+Option-4:	None of the above
+
+Ajinkya has created two data tables in DataSet viz; categoryTable and prodTable. He would like to create foreign key column CategoryID in prodTable. Identify the code snippet to implement this functionality.
+Option-1:	ForiegnKeyConstraint catProdFK = new ForiegnKeyConstraint("CatProdFK", prodDS.Tables["categoryTable"].Columns["CategoryID"], prodDS.Tables["prodTable"].Columns["CategoryID"]);
+Option-2:	ForiegnKeyConstraint catProdFK = new ForiegnKeyConstraint("CatProdFK", prodDS.Tables["categoryTable"].Columns["CategoryID"], prodDS.Tables["prodTable"].Columns["CategoryID"]); prodDS.Tables["categoryTable"].Constraints.Add(catProdFK);
+Option-3:	ForiegnKeyConstraint catProdFK = new ForiegnKeyConstraint("CatProdFK", prodDS.Tables["prodTable"].Columns["CategoryID"], prodDS.Tables["categoryTable"].Columns["CategoryID"); prodDS.Tables["categoryTable"].Constraints.Add(catProdFK);
+Option-4:	ForiegnKeyConstraint catProdFK = new ForiegnKeyConstraint("CatProdFK", prodDS.Tables["categoryTable"].Columns["CategoryID"], prodDS.Tables["prodTable"].Columns["CategoryID"]); prodDS.Tables["prodTable"].Constraints.Add(catProdFK);
+
+Which of the following value of RowState property will cause CommandBuilder to generate update command?
+Option-1:	Updated
+Option-2:	Modified
+Option-3:	Deleted
+Option-4:	Added
+
+Akash has DataAdapter object daProduct. He would like to retrieve data into dataset along with the schema information. Which of the following method will achieve the same?
+Option-1:	Fill()
+Option-2:	FillSchema()
+Option-3:	Update()
+Option-4:	UpdateSchema()
+
+Bhakti for her Online reservation system Web application needs to sort the data in GridView. Suggest her the best option.
+Option-1:	Set the AllowSorting property to True.
+Option-2:	Choose the Enable Sorting option from the smart tag.
+Option-3:	Set the AllowSorting property to false.
+Option-4:	Sorting cannot be enabled in GridView.
+
+Identify the true or false statement related to Validation Summary control in ASP.Net: 1: The difference between the ErrorMessage and Text property is that any message that you assign to the ErrorMessage property appears in the body of the page, and any message that you assign to the Text property appears in the ValidationSummary control. 2: If you don't assign a value to the Text property, then the value of the ErrorMessage property is displayed in both the ValidationSummary control and the body of the page.
+Option-1:	Both are true
+Option-2:	Both are false
+Option-3:	Statement 1 is true and Statement 2 is false
+Option-4:	Statement 2 is true and Statement 1 is false
+
+To access members of a specific master page from a content page, you can create a strongly typed reference to the master page by using _________.
+Option-1:	@ MasterType directive
+Option-2:	masterPageFile
+Option-3:	MasterPageFile
+Option-4:	Master
+
+Rahul for his ASP.Net Web Application needs to verify the supplied UserName & Password credentials. Which method of Membership you would recommend him?
+Option-1:	MemberShip.ValidateUser
+Option-2:	Membership.CheckUserName
+Option-3:	MemberShip.CheckUserNamePassword
+Option-4:	MemberShip.CreateUser
+
+In ASP.Net the __________ works directly with your Web site's site map data.
+Option-1:	SiteMapPath control
+Option-2:	Web.Sitemap
+Option-3:	SiteMapDatasource
+Option-4:	SiteMapProvider
+
+
+Identify the true or false statement: 1: The Trace attribute in the @ Page directive takes precedence over attributes set in the trace element in the Web.config 2: If tracing is enabled, when the page is requested, ASP.NET appends to the page a series of tables containing execution details about the page request.
+Option-1:	Both are false
+Option-2:	Both are True
+Option-3:	Statement 1 is true and Statement 2 is false
+Option-4:	Statement 2 is true and Statement 1 is false
+
+The ______ directive associates aliases with namespaces and class names for notation in custom server control.
+Option-1:	@Register
+Option-2:	@Reference
+Option-3:	@Master
+Option-4:	@Control
+
+
+________ event of ASP.Net Page Life Cycle restores ViewState information.
+Option-1:	LoadPostData
+Option-2:	LoadViewState
+Option-3:	SaveViewState
+Option-4:	PreRenderComplete
+
+Raj needs to access ASP.NET authentication and profile application services using JavaScript classes. Which ASP.Net AJAX control you would recommend him?
+Option-1:	ScriptManager
+Option-2:	UpdateProgress
+Option-3:	UpdatePanel
+Option-4:	Timer
+
+_________ ASP.Net State Management technique does not render visibility in the browser, but its properties can be set with a standard control.
+Option-1:	QueryString
+Option-2:	ViewState
+Option-3:	ControlState
+Option-4:	HiddenField
+
+
+The _________ file resides in the root directory of an ASP.NET application. At run time it is parsed and compiled into a dynamically generated .NET Framework class derived from the HttpApplication base class.
+Option-1:	Global.asax
+Option-2:	Web.Config
+Option-3:	Web.SiteMap
+Option-4:	App.Config
+
+
+Varun wants to clean up , exit the session which code snippet you will recommend Varun?
+Option-1:	protected void Session_End(object sender, EventArgs e) { Session.Abandon()l; }
+Option-2:	protected void Session_Start(object sender, EventArgs e) { Session.Abandon()l; }
+Option-3:	protected void Session_OnStart(object sender, EventArgs e) { Session.Exit()l; }
+Option-4:	protected void Session_OnEnd(object sender, EventArgs e) { Session.Exit()l; }
+
+________ is responsible to manage all the request and response that are coming from client system.
+Option-1:	Worker Process (w3wp.exe)
+Option-2:	ISAPI
+Option-3:	Application Pool
+Option-4:	Application Pool worker process
+
+Mona want to pass product number from one page to another page where it will be processed. Which ASP.Net State Management technique you will recommend her?
+Option-1:	ViewState
+Option-2:	QueryString
+Option-3:	ControlState
+Option-4:	Session
+
+Which of the following objects is passed as a parameter to RegisterRoutes method in RouteConfig.cs?
+Option-1:	Route
+Option-2:	RouteTable
+Option-3:	RouteCollection
+Option-4:	RouteList
+
+
+Question No-27  	Single Choice	Select Que-No:      Go to Question
+State True or False. 1: ASP.NET MVC follows Even-driven development model. 2: In MVC the Views and Logic will reside separately
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both the Statements are True
+Option-3:	Statement1 is False Statement2 is True
+Option-4:	Both the Statements are False
+
+
+uestion No-28  	Single Choice	Select Que-No:      Go to Question
+Identify the correct code snippet to enable Attribute Routing.
+Option-1:	public class RouteConfig { public static void RegisterRoutes (RouteCollection routes) { routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); routes.MvcAttributeRoutes(); } }
+Option-2:	public class RouteConfig { public static void RegisterRoutes (RouteCollection routes) { routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); routes.MapMvcAttribute(); } }
+Option-3:	public class RouteConfig { public static void RegisterRoutes (RouteCollection routes) { routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); routes.MapMvcAttributeRoutes(); } }
+Option-4:	public class RouteConfig { public static void RegisterRoutes (RouteCollection routes) { routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); routes.MapAttributeRoutes(); } }
+ 	Previous      Next	   Show Correct Answer
+
+
+Refer the below code snippet of ASP.Net Web API and identify the simple and complex types: HttpResponseMessage Get( int id ,Item item) { }
+Option-1:	Both are complex we don't have simple type
+Option-2:	Both are simple types we don't have complex type
+Option-3:	Id is a Simple Type and item is a Complex Type.
+Option-4:	Id is a complex Type and item is a simple Type.
+
+Question No-30  	Single Choice	Select Que-No:      Go to Question
+__________ constructor is used to initialize a class. It is called before any objects are created.
+Option-1:	Default
+Option-2:	Private
+Option-3:	Static
+Option-4:	Instance
+
+Question No-32  	Single Choice	Select Que-No:      Go to Question
+What will be the output of below code snippet of Nullable Type? class Program { static void Main(string[] args) { int? myI1, myI2, myI3; myI1 = 28; myI2 = myI1; myI3 = null; Console.WriteLine("myI1: {0}, myI2: {1}", myI1, myI2); } }
+Option-1:	The code will produce myI1: 28, myI2: 28 as output
+Option-2:	Compile Time error
+Option-3:	Runtime Error
+Option-4:	Incorrect declaration of nullable type
+
+Question No-33  	Single Choice	Select Que-No:      Go to Question
+Identify the correct code snippet for Readonly AutoImpemented property in C#:
+Option-1:	public string Name { get; private set; }
+Option-2:	public string Name { get; public set; }
+Option-3:	public string Name { get; internal set; }
+Option-4:	public string Name { get; protected set; }
+
+Question No-39  	Single Choice	Select Que-No:      Go to Question
+What will be the output of below code snippet of delegate? ------------------------------------------------------------------------- delegate void PrintFunction(); class Test { public void Print1() { Console.WriteLine("Print1 -- instance"); } public static void Print2() { Console.WriteLine("Print2 -- static"); } } class Program { static void Main() { Test t = new Test(); PrintFunction pf; pf = t.Print1; pf += Test.Print2; pf += t.Print1; pf += Test.Print2; if( null != pf ) pf(); else Console.WriteLine("Delegate is empty"); } }
+Option-1:	Code will produce runtime error
+Option-2:	Code will produce compile time error
+Option-3:	Delegate will be Empty
+Option-4:	Will print on Console window Print1 -- instance Print2 -- static Print1 -- instance Print2 -- static
+
+What will be the output of below code snippet of Extension Methods? namespace ExtensionMethods { sealed class MyData { private double D1, D2, D3; public MyData(double d1, double d2, double d3) { D1 = d1; D2 = d2; D3 = d3; } public double Sum() { return D1 + D2 + D3; } } static class ExtendMyData Keyword and type { public static double Average(this MyData md) { Declared static return md.Sum() / 3; } } class Program { static void Main() { MyData md = new MyData(3, 4, 5); Console.WriteLine("Sum: {0}", md.Sum()); Console.WriteLine("Average: {0}", md.Average()); } } }
+Option-1:	Incorrect declaration of Extension Method
+Option-2:	Compile Time error
+Option-3:	Runtime Error
+Option-4:	Will display Sum: 12 Average: 4
+
+Question No-35  	Single Choice	Select Que-No:      Go to Question
+Identify the true or false statement related to Garbage Collector: 1: The .NET Framework garbage collector allocates or releases unmanaged memory 2: Finalize is a faster method for instant disposal of the objects.
+Option-1:	Both are true
+Option-2:	Both are false
+Option-3:	Statement 1 is true and Statement 2 is false
+Option-4:	Statement 2 is true and Statement 1 is false
+
+Question No-36  	Single Choice	Select Que-No:      Go to Question
+In ArrayList __________ retrieves or sets the number of items in the collection.
+Option-1:	Count
+Option-2:	Peek
+Option-3:	Pop
+Option-4:	Capacity
+
+Question No-37  	Single Choice	Select Que-No:      Go to Question
+Predict the output: public class MyClass { public IEnumerable MyIterator() { yield return "Hi" ; yield return "Welcome."; yield return "To"; yield return "Capgemini."; } public static void Main() { MyClass mc = new MyClass(); foreach (string item in mc.MyIterator()) Console.Write(item + " "); Console.ReadLine(); } }
+Option-1:	Will generate compile time error
+Option-2:	Will generate runtime error
+Option-3:	Code will run successfully
+Option-4:	Myiterator is not declared correctly
+
+Question No-38  	Single Choice	Select Que-No:      Go to Question
+_________ block of Exception Handling contain the code that cleans up any resources.
+Option-1:	Try
+Option-2:	Throw
+Option-3:	Catch
+Option-4:	finally
+
+
+What will be the output of below code snippet of delegate? ------------------------------------------------------------------------- delegate void PrintFunction(); class Test { public void Print1() { Console.WriteLine("Print1 -- instance"); } public static void Print2() { Console.WriteLine("Print2 -- static"); } } class Program { static void Main() { Test t = new Test(); PrintFunction pf; pf = t.Print1; pf += Test.Print2; pf += t.Print1; pf += Test.Print2; if( null != pf ) pf(); else Console.WriteLine("Delegate is empty"); } }
+Option-1:	Code will produce runtime error
+Option-2:	Code will produce compile time error
+Option-3:	Delegate will be Empty
+Option-4:	Will print on Console window Print1 -- instance Print2 -- static Print1 -- instance Print2 -- static
+
+Question No-40  	Single Choice	Select Que-No:      Go to Question
+Identify the true or false statements related to Lambda expressions: 1: Lambda expressions are particularly helpful for writing LINQ query expressions. 2: To create a lambda expression, you specify input parameters (if any) on the left side of the lambda operator =>, and you put the expression or statement block on the other side.
+Option-1:	Both are true
+Option-2:	Both are false
+Option-3:	Statement 1 is true and Statement 2 is false
+Option-4:	Statement 2 is true and Statement 1 is false
+
+Question No-41  	Single Choice	Select Que-No:      Go to Question
+In File handling _________ provides methods and properties for processing directory strings in a cross-platform manner.
+Option-1:	File
+Option-2:	Directory
+Option-3:	FileInfo
+Option-4:	Path
+
+Question No-42  	Multiple Choice	Select Que-No:      Go to Question
+Assemblies Metadata consists of ____________.
+Option-1:	Identity of the assembly
+Option-2:	Attributes
+Option-3:	MSIL
+Option-4:	PE
+
+When are the activities like knowledge transfer, end user training, project signoff carried out?
+Option-1:	After unit testing
+Option-2:	After acceptance testing
+Option-3:	After system testing
+Option-4:	Before system testing
+
+uestion No-47  	Single Choice	Select Que-No:      Go to Question
+The _________ namespace is the root namespace that contains the fundamental types of the .NET Framework.
+Option-1:	Root
+Option-2:	Route
+Option-3:	System
+Option-4:	Object
+
+Question No-46  	Single Choice	Select Que-No:      Go to Question
+The _________ is a comprehensive, object-oriented collection of reusable types that you can use to develop applications ranging from traditional command-line or graphical user interface (GUI) applications to applications based on the latest innovations provided by ASP.NET, such as Web Forms and XML Web services.
+Option-1:	CLR
+Option-2:	CTS
+Option-3:	CLS
+Option-4:	Class Library
+
+Question No-45  	Single Choice	Select Que-No:      Go to Question
+With _________ managed code can consume other managed classes, types, and objects, while strictly enforcing type fidelity and type safety.
+Option-1:	CLS
+Option-2:	CTS
+Option-3:	CLR
+Option-4:	Code Manager
+
+Question No-43  	Single Choice	Select Que-No:      Go to Question
+Which of the code snippet selects all
+Option-1:	$('table tr')
+Option-2:	$.('table.tr')
+Option-3:	$['table tr']
+Option-4:	${'table tr'}
+
+Question No-42  	Multiple Choice	Select Que-No:      Go to Question
+Assemblies Metadata consists of ____________.
+Option-1:	Identity of the assembly
+Option-2:	Attributes
+Option-3:	MSIL
+Option-4:	PE
+
+
+Question No-49  	Single Choice	Select Que-No:      Go to Question
+Elicitation process is carried under which phase of SDLC model?
+Option-1:	Feasibility
+Option-2:	Design
+Option-3:	Requirements
+Option-4:	Coding
+
+Question No-50  	Single Choice	Select Que-No:      Go to Question
+Which of the given is an example of non configuration item?
+Option-1:	Design document
+Option-2:	Project plan
+Option-3:	Weekly status Reports
+Option-4:	Test case
+
+Question No-51  	Single Choice	Select Que-No:      Go to Question
+The following code has been written: int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }; int[] moreNumbers = { 10, 11, 12, 13 }; Based on the above code, identify the correct operator to get the following output: 1 2 3 4 5 6 7 8 9 10 11 12 13
+Option-1:	Add
+Option-2:	Sum
+Option-3:	Combine
+Option-4:	Concat
+
+Question No-52  	Single Choice	Select Que-No:      Go to Question
+Dev is developing Online Banking System. He is using Enity Framework as a data access mechanism. His client frequently adds new features to the system in a bid to create great banking experience for the customers. As a result, there are frequent changes to the database. Identify the Enity Framework mechanism Mahesh should use to implement this functionality.
+Option-1:	Code First
+Option-2:	Model First
+Option-3:	Data First
+Option-4:	Entity SQL
+
+Question No-53  	Single Choice	Select Que-No:      Go to Question
+"Keyboard has keys" is an example of _________.
+Option-1:	Aggregation
+Option-2:	Composition
+Option-3:	Generalization
+Option-4:	Realization
+
+uestion No-54  	Single Choice	Select Que-No:      Go to Question
+Analyze the below given class diagram and identify the relationship represented between these two classes. [Refer to Q54 Diagram]
+Option-1:	Aggregation
+Option-2:	Composition
+Option-3:	Generalization
+Option-4:	Realization
+
+uestion No-55  	Single Choice	Select Que-No:      Go to Question
+State True or False. 1: TFBuild allows authoring, queueing and monitoring builds. 2: Software projects in Team Foundation are called team projects.
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both the Statements are True
+Option-3:	Both the Statements are False
+Option-4:	Statement 2 is True Statement 1 is False
+
+
+Question No-56  	Single Choice	Select Que-No:      Go to Question
+Which of the following contracts act as an entry point to access a WCF service?
+Option-1:	Operation Contract
+Option-2:	Data Contract
+Option-3:	Service Contract
+Option-4:	Message Contract
+
+Question No-58  	Single Choice	Select Que-No:      Go to Question
+Non-fulfillment of user's expectations is called as _______.
+Option-1:	Issue
+Option-2:	Defect
+Option-3:	Product
+Option-4:	Risk
+
+Question No-59  	Single Choice	Select Que-No:      Go to Question
+What is the full form of QMS?
+Option-1:	Quality Management System
+Option-2:	Quality Manual System
+Option-3:	Quality Monitoring System
+Option-4:	None of the above
+
+Question No-60  	Single Choice	Select Que-No:      Go to Question
+In SQL Server, _________ is assumed for new constraints, and _________ is assumed for re-enabled constraints.
+Option-1:	WITH CHECK , WITH NOCHECK
+Option-2:	PrimaryKey, UniqueKey
+Option-3:	Enable, Disable
+Option-4:	Allow, Deny
+
+Question No-61  	Single Choice	Select Que-No:      Go to Question
+Consider a join of the Product table and the SalesOrderDetail table on their ProductID columns. You need to display all rows from both tables regardless of whether there is matching data in the tables. Which query would you choose?
+Option-1:	SELECT p.Name, sod.SalesOrderID FROM Production.Product p RIGHT OUTER JOIN Sales.SalesOrderDetail sod ON p.ProductID = sod.ProductID
+Option-2:	SELECT p.Name, sod.SalesOrderID FROM Production.Product p LEFT OUTER JOIN Sales.SalesOrderDetail sod ON p.ProductID = sod.ProductID
+Option-3:	SELECT p.Name, sod.SalesOrderID FROM Production.Product p FULL OUTER JOIN Sales.SalesOrderDetail sod ON p.ProductID = sod.ProductID
+Option-4:	SELECT p.Name, sod.SalesOrderID FROM Production.Product p CROSS OUTER JOIN Sales.SalesOrderDetail sod ON p.ProductID = sod.ProductID
+ 	Previous      Next	   Show Correct Answer
+Label 
+
+Question No-62  	Single Choice	Select Que-No:      Go to Question
+__________ set operator takes the data from both result sets which are in common.
+Option-1:	Union
+Option-2:	Intersect
+Option-3:	UnionAll
+Option-4:	Except
+
+Question No-63  	Single Choice	Select Que-No:      Go to Question
+__________ is information that stores the location and shape of geometric objects. for e.g. a building, a road, a river, a city, a continent, or an ocean.
+Option-1:	Spatial Data
+Option-2:	Hierarchy
+Option-3:	Alias
+Option-4:	Rule
+
+Question No-64  	Single Choice	Select Que-No:      Go to Question
+Identify the true or false statements related to Indexes: 1: By default a unique clustered index is created to enforce a PRIMARY KEY constraint. 2: By default, a unique nonclustered index is created to enforce a UNIQUE constraint.
+Option-1:	Both are true
+Option-2:	Both are false
+Option-3:	Statement 1 is true and Statement 2 is false
+Option-4:	Statement 2 is true and Statement 1 is false
+
+Question No-67  	Single Choice	Select Que-No:      Go to Question
+Choose the correct style example of ID selector?
+Option-1:	p { text-align: center; color: red; }
+Option-2:	#para1 { text-align: center; color: red; }
+Option-3:	.center { text-align: center; color: red; }
+Option-4:	h1, h2, p { text-align: center; color: red; }
+
+Question No-68  	Single Choice	Select Que-No:      Go to Question
+What happens if moveTo(x,y) method is called on window object in JavaScript ?
+Option-1:	Current window will be move to the coordinate specified by x and y.
+Option-2:	Current window will be move by x and y value.
+Option-3:	Moves window to a new frame.
+Option-4:	Window will disappear in background.
+
+Question No-69  	Multiple Choice	Select Que-No:      Go to Question
+_________ Window object event handler in Javascript DOM is fired when window or frame has been activated and deactivated respectively.
+Option-1:	OnFocus
+Option-2:	OnBlur
+Option-3:	OnLostfocus
+Option-4:	OnActivated
+
+Question No-70  	Single Choice	Select Que-No:      Go to Question
+Identify the true or false statements related to well Formed XML Document: 1: A well-formed XML does need a DTD, but should conform to XML syntax 2: A well-formed XML document simply includes markup pages with descriptive tags
+Option-1:	Both are true
+Option-2:	Both are false
+Option-3:	Statement 1 is true and Statement 2 is false
+Option-4:	Statement 2 is true and Statement 1 is false
+
+Question No-71  	Single Choice	Select Que-No:      Go to Question
+State True or False. 1. ASP.NET MVC uses UserControls for code reusability. 2. In MVC the Views and Logic will reside separately
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both the Statements are True
+Option-3:	Both the Statements are False
+Option-4:	Statement1 is False Statement2 is True
+
+uestion No-73  	Single Choice	Select Que-No:      Go to Question
+Identify the true or false statements related to WPF : 1: The UpdateSourceTrigger property enables you to set when the data transmitted to the source by a binding is updated. 2: You set DataContext in code when the binding source must be initialized in code
+Option-1:	Both are false
+Option-2:	Both are true
+Option-3:	Statement 1 is true and Statement 2 is false
+Option-4:	Statement 2 is true and Statement 1 is false
+
+Identify the true or false statements related to Event Handling in WPF: 1: Routed events are registered in a static constructor, and wrapped by a standard .NET event definition. 2: The RaiseEvent() method takes care of firing the event to every caller that's been registered with the AddHandler() method.
+Option-1:	Both are false
+Option-2:	Both are true
+Option-3:	Statement 1 is true and Statement 2 is false
+Option-4:	Statement 2 is true and Statement 1 is false
+
+Question No-77  	Single Choice	Select Que-No:      Go to Question
+Which of the following provides a way for the DataReader to automatically close the connection, once the reader has read all the data?
+Option-1:	CommandBehaviour.DisposeConnection
+Option-2:	CommandBehaviour.ConnectionClose
+Option-3:	CommandBehaviour.CloseConnection
+Option-4:	CommandBehaviour.Close
+
+Which of the following ADO.NET objects starts a database transaction by invoking BeginTransaction() method ?
+Option-1:	Command
+Option-2:	DataReader
+Option-3:	Connection
+Option-4:	DataAdapter
+
+Question No-79  	Single Choice	Select Que-No:      Go to Question
+Which object in ADO.NET is responsible for generating insert, update and delete command for every inserted, updated and deleted row in a DataSet?
+Option-1:	DataSet
+Option-2:	CommandBuilder
+Option-3:	DataAdapter
+Option-4:	Command
+
+Question No-80  	Multiple Choice	Select Que-No:      Go to Question
+Which of the following is/are true about ADO.NET?
+Option-1:	It enables to create distributed data sharing applications
+Option-2:	It uses XML to transfer data across applications and data source
+Option-3:	It supports only disconnected architecture
+Option-4:	The classes of ADO.NET are defined in the System.Data.ADO namespace
+
+Question No-81  	Single Choice	Select Que-No:      Go to Question
+Arun is developing an application and uses Microsoft ADO.NET for the DB Connection. He must ensure that the application can connect to any type of database. Identify the correct code snippet he has used for creating database independent application?
+Option-1:	DbConnection connection = new OdbcConnection(connectionString);
+Option-2:	DbProviderFactory factory = DbProviderFactories.GetFactory(databaseProviderName); DbConnection connection = factory.CreateConnection();
+Option-3:	DbProviderFactory factory = DbProviderFactories.GetFactory("System.Data.Odbc"); DbConnection connection = factory.CreateConnection();
+Option-4:	DbConnection connection = new OleDbConnection(connectionString);
+
+Question No-82  	Single Choice	Select Que-No:      Go to Question
+Consider the following code: foreach (DataRow row in dt.Rows) { if ( XXXX ) { } } Note: dt - DataTable What line of code has to substituted at XXXX to process only those DataRows which are updated in DataTable?
+Option-1:	row.DataRow == DataRow.Modified
+Option-2:	row.RowState == DataRowState.Updated
+Option-3:	row.RowState == DataRowState.Modified
+Option-4:	row.DataRow == DataRowState.Updated
+
+Question No-83  	Single Choice	Select Que-No:      Go to Question
+__________ property in ADO.NET can be used to determine whether a row in a DataTable is newly created, updated, deleted or unchanged.
+Option-1:	TableName
+Option-2:	PrimaryKey
+Option-3:	RowState
+Option-4:	EnforceConstraints
+
+Question No-84  	Single Choice	Select Que-No:      Go to Question
+The following code has been written (gridRegion is name of the DataGridView control displaying the records): 1. SqlConnection con = new SqlConnection("Valid Connection String"); 2. SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Employee", con); 3. DataSet ds = new DataSet("CG"); 4. adapter.Fill(ds, "Employees"); 5. DataView viewRegion = new DataView(ds.Tables["Employees"]); 6. // Code to retrieve customers from Region 7. gridRegion.DataSource = viewRegion; Identify the missing code statement to be inserted at line number 6 to retrieve details of the Employees who are from Chennai.
+Option-1:	viewRegion.Region = 'Chennai';
+Option-2:	viewRegion.Where = "Region = 'Chennai'";
+Option-3:	viewRegion.RowFilter = "Region = 'Chennai'";
+Option-4:	viewRegion.Filter = "Region = 'Chennai'";
+
+Question No-85  	Single Choice	Select Que-No:      Go to Question
+Rohith has created a Dataset object. He wants to check whether the DataSet has been updated with any changes made to it since it was last loaded. Which Dataset member Rohith should use?
+Option-1:	AcceptChanges()
+Option-2:	GetChanges()
+Option-3:	HasChanges()
+Option-4:	RejectChanges()
+
+Question No-86  	Single Choice	Select Que-No:      Go to Question
+Which of the following methods is used to write an XML representation of a DataSet, with its schema?
+Option-1:	Write()
+Option-2:	WriteXSD()
+Option-3:	WriteXml()
+Option-4:	WriteSchema()
+
+Question No-87  	Single Choice	Select Que-No:      Go to Question
+Sneha has developed a WebSite for her Company where she has written coding for connecting to databases and few IO operations. She has to ensure that the final cleanup work such as closing of DB connection,discarding objects, closing files are performed whenever the webpage is closed. In which of the following events she should have done these?
+Option-1:	Page_Init
+Option-2:	Page_LoadComplete
+Option-3:	Page_Unload
+Option-4:	Page_Close
+
+State True or False w.r.t Code Render Block: 1.Code Render blocks are used to define inline code or Expressions that will be executed when a Page is rendered. 2.Inline code render blocks execute one or more statements, and are placed directly inside a page's HTML between <@ and @> delimiters.
+Option-1:	Statement 1 is True. Statement 2 is False.
+Option-2:	Both the Statements are False.
+Option-3:	Statement 1 is False. Statement 2 is True.
+Option-4:	Both the Statements are True.
+
+Question No-89  	Single Choice	Select Que-No:      Go to Question
+Consider an E-Library Management System, where the admin needs to upload multiple documents using FileUpload control. Identify the code snippet to iterate through the uploaded files to add the FileNames in the ListBox.
+Option-1:	foreach(var file in fileUpload1) { listBox1.Items.Add(file.FileName); }
+Option-2:	foreach(var file in fileUpload1.PostedFiles) { listBox1.Items.Add(file.Name); }
+Option-3:	foreach(var file in fileUpload1) { listBox1.Items.Add(file.File); }
+Option-4:	foreach(var file in fileUpload1.PostedFiles) { listBox1.Items.Add(file.FileName); }
+
+Question No-90  	Single Choice	Select Que-No:      Go to Question
+Which of the following statement/s is/are true? Statement 1 : Server Side validation control performs browser detection and makes decision based on the information gathered. Statement 2 : Whenever user would like to avoid a round trip to the server for validation he/she should use client side validation.
+Option-1:	Statement 1 is true and Statement 2 is false
+Option-2:	Statement 2 is true and Statement 1 is false
+Option-3:	Both the Statements are true
+Option-4:	Both the Statements are false
+
+Question No-91  	Single Choice	Select Que-No:      Go to Question
+Which of the following statement is true? Statement 1 : The SiteMapDataSource interprets Physical Data Statement 2 : The SiteMapProvider stores information about site's hierarchical organization
+Option-1:	1: False 2: True
+Option-2:	1: False 2: False
+Option-3:	1: True 2: False
+Option-4:	1: True 2: True
+
+Question No-92  	Single Choice	Select Que-No:      Go to Question
+Match the following : 1) Local Window 2) Autos Window 3) Watch Window a) Watch variables in the current line b) Watch certain variables or expressions c) Watch variables inside current scope
+Option-1:	1 - c, 2 - a, 3 - b
+Option-2:	1 - b, 2 - c, 3 - a
+Option-3:	1 - b, 2 - a, 3 - c
+Option-4:	1 - a, 2 - c, 3 - b
+
+Question No-93  	Single Choice	Select Que-No:      Go to Question
+Samhita wants to display the Product Details in a DataBound Control like Repeater. Complete the following code, written for displaying ProductName on the Page using a DataBinding expression. ProductName:
+Option-1:	<%Eval("ProductName") %>
+Option-2:	<%# Eval("ProductName") %>
+Option-3:	<%# Eval("ProductName") >
+Option-4:	<# Eval("ProductName") >
+
+
+Question No-94  	Single Choice	Select Que-No:      Go to Question
+Which of the following is the correct directive for a master page?
+Option-1:	< %@ MasterPage Language="C#" Inherits="MasterPage" % >
+Option-2:	< %@ Master Lang="C#" Inherits="MasterPage" % >
+Option-3:	< %@ Master Language="C#" Inherits="MasterPage" % >
+Option-4:	< %@ MasterPage Language="C#" Inherits="MasterPage" Extends="MyMasterPage" % >
+
+Question No-95  	Single Choice	Select Que-No:      Go to Question
+Which of the following is not a correct option for disabling session state?
+Option-1:	Disabling in machine.config file
+Option-2:	Disabling in web.config file
+Option-3:	Page EnableSessionState=false
+Option-4:	Page EnableSessionState=readonly
+ 	Previous      Next
+
+Question No-96  	Single Choice	Select Que-No:      Go to Question
+State True or False. Statement 1: Application_Start event will be triggered whenever Global.asax file is modified. Statement 2: Session.Exit() method must be called in Session_End event whenever an user logs out of a session.
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both the Statements are True
+Option-3:	Statement1 is False Statement2 is True
+Option-4:	Both the Statements are False
+
+Question No-97  	Single Choice	Select Que-No:      Go to Question
+Which of the following actions must be taken in order that the session state information will be stored even after the application gets restarted?
+Option-1:	In the web.config file, set the mode attribute of sessionstate to InProc
+Option-2:	In the Page directive set the EnableSessionState attribute to false
+Option-3:	In the web.config file, set the mode attribute of sessionstate to StateServer
+Option-4:	In the Page directive set the EnableSessionState attribute to ReadOnly
+
+Question No-98  	Single Choice	Select Que-No:      Go to Question
+Sonu is developing a Website which needs to cache data on the client. As an alternative to cookies, she is using DOM storage. Identify the correct code snippet for storing and retrieving data from per-domain web storage.
+Option-1:	sessionStorage.setItem('company',' Capgemini'); var coName=sessionStorage.getItem('company');
+Option-2:	localStorage.put('company', 'Capgemini'); var coName=localStorage.get('company');
+Option-3:	sessionStorage.put('company',' Capgemini'); var coName=sessionStorage.get('company');
+Option-4:	localStorage.setItem('company', 'Capgemini'); var coName=localStorage.getItem('company');
+
+uestion No-99  	Single Choice	Select Que-No:      Go to Question
+Which among the following method removes the user information stored in Authentication Cookies created on the users computer and makes the user to exit the Application?
+Option-1:	LogOut
+Option-2:	RedirectFromLoginPage
+Option-3:	UnAuthenticate
+Option-4:	SignOut
+
+Question No-100  	Single Choice	Select Que-No:      Go to Question
+ChildrenAsTriggers property of UpdatePanel control is used only when the UpdateMode property is set to _________.
+Option-1:	Always
+Option-2:	Conditional
+Option-3:	Update
+Option-4:	Trigger
+
+Question No-101  	Single Choice	Select Que-No:      Go to Question
+Identify the correct code snippet to enable Attribute Routing.
+Option-1:	public class RouteConfig { public static void RegisterRoutes (RouteCollection routes) { routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); routes.MvcAttributeRoutes(); } }
+Option-2:	public class RouteConfig { public static void RegisterRoutes (RouteCollection routes) { routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); routes.MapMvcAttribute(); } }
+Option-3:	public class RouteConfig { public static void RegisterRoutes (RouteCollection routes) { routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); routes.MapMvcAttributeRoutes(); } }
+Option-4:	public class RouteConfig { public static void RegisterRoutes (RouteCollection routes) { routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); routes.MapAttributeRoutes(); } }
+
+Question No-102  	Single Choice	Select Que-No:      Go to Question
+Identify the correct statements with respect to Razor View Engine. 1. Razor View engine generates output by combining Data and Template. 2. The Razor Views are executed without recompilation.
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both are True
+Option-3:	Statement1 is False Statement2 is True
+Option-4:	Both are False
+
+Question No-103  	Single Choice	Select Que-No:      Go to Question
+Sharan is creating an Application using MVC Razor Engine. He designed a masterpage named EshopLayout.cshtml to give a consistent look and feel to all the pages in his Application. The default value of Layout variable needs to be replaced with the new Layout file name. In which file he has to make this modification?
+Option-1:	_Layout.cshtml
+Option-2:	_LoginPartial.cshtml
+Option-3:	_ViewStart.cshtml
+Option-4:	_Master.cshtml
+
+Question No-104  	Single Choice	Select Que-No:      Go to Question
+Consider the following code snippet: public class Rectangle { public double Length { get; set; } public double Breadth { get; set; } } public AreaController : ApiController { public HttpResponseMessage Get([FromUri] Rectangle rect) { ... } } Identify the URI that uses ParameterBinding for the WebAPI.
+Option-1:	http://localhost/Area/?Length=20&Breadth=10
+Option-2:	http://localhost/api/?Length=20&Breadth=10
+Option-3:	http://localhost/api/Area/?Rectangle(10,20)
+Option-4:	http://localhost/api/Area/?Length=20&Breadth=10
+
+Question No-105  	Single Choice	Select Que-No:      Go to Question
+State Whether True or False. 1.Nullable can be used for both value and reference Types. 2.Only one key can be null in a Hashtable
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both the Statements are True
+Option-3:	Statement1 is False Statement2 is True
+Option-4:	Both the Statements are False
+
+Question No-106  	Single Choice	Select Que-No:      Go to Question
+What is the correct way to declare a two-dimensional array to hold integer type data?
+Option-1:	int arr(2);
+Option-2:	int[,] arr;
+Option-3:	int(,) arr;
+Option-4:	int arr[2];
+
+Question No-107  	Single Choice	Select Que-No:      Go to Question
+Which of the following code represents unboxing?
+Option-1:	static void Main(string[] args) { int num = 10; float num1; num1 = num; }
+Option-2:	static void Main(string[] args) { float num = 10.5f; int num1; num1 = (int)num; }
+Option-3:	static void Main(string[] args) { int num = 10; object num1; num1 = num; }
+Option-4:	static void Main(string[] args) { object num = 10; int num1; num1 = (int)num; }
+
+Question No-108  	Single Choice	Select Que-No:      Go to Question
+Which of the following is the correct way to declare enumeration in C#?
+Option-1:	namespace EmpSystem { enum TagColor { Blue, Red, Grey } class Employee { } }
+Option-2:	namespace EmpSystem { enum TagColor ( Blue, Red, Grey ); class Employee { } }
+Option-3:	namespace EmpSystem { enum TagColor { Blue; Red; Grey; } class Employee { } }
+Option-4:	namespace EmpSystem { enum TagColor ( Blue; Red; Grey; ) class Employee { } }
+
+Question No-109  	Single Choice	Select Que-No:      Go to Question
+Predict the output of the following code. static void Sum(ref int[] arr) { int i = 0; foreach(var ele in arr) { arr[i] = ele * 2; i++; } } static void Main(string[] args) { int[] arr = { 1, 2, 3 }; Sum(ref arr); foreach (var ele in arr) { Console.Write(ele + " "); } Console.ReadKey(); }
+Option-1:	1 2 3
+Option-2:	0 0 0
+Option-3:	0 2 4
+Option-4:	2 4 6
+
+Question No-110  	Single Choice	Select Que-No:      Go to Question
+Examine the following Lambda Expressions and interpret the correct meanings of the same. 1. P => P+1 2. (int Y) => {return Y+1;} 3. () => Console.WriteLine() a. Multiple Parameters b. Parameterless c. Implicitly typed Parameters & expression body d. Explicitly typed Parameters & statement body
+Option-1:	1- a, 2- c, 3- d
+Option-2:	1- d, 2- c, 3- a
+Option-3:	1- c, 2- d, 3- b
+Option-4:	1- c, 2- b, 3- a
+
+Question No-111  	Single Choice	Select Que-No:      Go to Question
+State whether True or False: 1.Shared assemblies are stored in Global Assembly Cache. 2.To provide a strong name for an assembly, generate the public / private key data using strongkey.exe utility.
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both the Statements are True
+Option-3:	Statement1 is False Statement2 is True
+Option-4:	Both the Statements are False
+
+Question No-112  	Single Choice	Select Que-No:      Go to Question
+var itemList = new List() { "Sam", 102123, "Sr.Consultant", "Training",78500,8.5 }; Based on the code above, if an error is reported when the code is compiled, how will you resolve the error?
+Option-1:	Change List to List.
+Option-2:	Change List to List.
+Option-3:	Make initialization into a separate statement
+Option-4:	Change var to List
+
+Question No-113  	Single Choice	Select Que-No:      Go to Question
+Amit wants to create an application which persists the state of "employee" objects into a file. The employee id must not be persisted. Which of the following options must to used to satisfy the above requirements?
+Option-1:	[Serialized] class Employee { [NonSerialized] int employeeId; string empName; float salary; }
+Option-2:	[Serializable] class Employee { [NonSerialized] int employeeId; string empName; float salary; }
+Option-3:	[Serializable] class Employee { [NonSerializable] int employeeId; string empName; float salary; }
+Option-4:	class Employee { [NonSerialized] int employeeId; string empName; float salary; }
+
+Question No-114  	Single Choice	Select Que-No:      Go to Question
+Identify the correct way to declare, create and instantiate delegates?
+Option-1:	delegate MyDelegate(string str1, string str2); static void Main(string[] args) { MyDelegate myDel = new MyDelegate(String.Concat); string message = myDel("Capgemini", "ILA"); }
+Option-2:	delegate string MyDelegate(string str1, string str2); static void Main(string[] args) { MyDelegate myDel = new MyDelegate(String.Concat("Capgemini", "ILA")); }
+Option-3:	delegate string MyDelegate(string str1, string str2); static void Main(string[] args) { MyDelegate myDel = new MyDelegate(String.Concat); string message = myDel("Capgemini", "ILA"); }
+Option-4:	delegate string MyDelegate(); static void Main(string[] args) { MyDelegate myDel = new MyDelegate(String.Concat); string message = myDel("Capgemini", "ILA"); }
+
+Question No-115  	Single Choice	Select Que-No:      Go to Question
+State whether True or False w.r.t. Garbage Collection. 1.Object Finalization is the phase to convert the object back to raw heap memory. 2.Object instantiation is the process of reducing the object instance into a format that can either be stored to disk or transported over a network.
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both the Statements are True
+Option-3:	Statement1 is False Statement2 is True
+Option-4:	Both the Statements are False
+
+Question No-116  	Single Choice	Select Que-No:      Go to Question
+State whether True or False w.r.t. Exception Handling. 1. try block can be followed by finally instead of catch 2. finally block encapsulates the code that cleans up any resources
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Both the Statements are True
+Option-3:	Statement1 is False Statement2 is True
+Option-4:	Both the Statements are False
+
+uestion No-117  	Single Choice	Select Que-No:      Go to Question
+Which of the following enables developers to concisely define inline CLR types within code, without having to explicitly define a formal class declaration of the type?
+Option-1:	Anonymous Types
+Option-2:	Object Initializers
+Option-3:	Delegates
+Option-4:	Nullable types
+
+uestion No-118  	Single Choice	Select Que-No:      Go to Question
+Identify the link which returns all the Schemas in a single document.
+Option-1:	http://localhost:8080/Service1.svc?wsdl
+Option-2:	http://localhost:8080/Service1.svc?singlewsdl
+Option-3:	http://localhost:8080/Service1.svc?single.wsdl
+Option-4:	http://localhost:8080/Service1.svc?wsdl.single
+
+uestion No-119  	Single Choice	Select Que-No:      Go to Question
+State whether True or False: 1. Language interoperability in .Net is possible through Common Type System(CTS) 2. In .NET, the runtime enforces code robustness by implementing a strict type and code verification infrastructure called the CTS
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Statement1 is True Statement2 is True
+Option-3:	Statement1 is False Statement2 is False
+Option-4:	Statement1 is False Statement2 is True
+
+uestion No-120  	Single Choice	Select Que-No:      Go to Question
+Which of the following component manages code execution and is used by the Class Loader to assign memory for the objects and data?
+Option-1:	Garbage Collector
+Option-2:	Code Manager
+Option-3:	COM Marshaler
+Option-4:	Type Checker
+
+Question No-121  	Single Choice	Select Que-No:      Go to Question
+State whether True or False w.r.t .Net BCL 1.The class library builds on the object-oriented nature of the runtime. 2.Third-party components can not integrate with the classes in the .NET Framework
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Statement1 is True Statement2 is True
+Option-3:	Statement1 is False Statement2 is False
+Option-4:	Statement1 is False Statement2 is True
+
+Question No-122  	Single Choice	Select Que-No:      Go to Question
+When is the application UI designed in a SDLC?
+Option-1:	During high level design
+Option-2:	During architectural design
+Option-3:	During low level design
+Option-4:	Before design phase
+
+Question No-123  	Single Choice	Select Que-No:      Go to Question
+When are the activities like knowledge transfer, end user training , project signoff carried out?
+Option-1:	After unit testing
+Option-2:	After acceptance testing
+Option-3:	After system testing
+Option-4:	Before system testing
+
+Question No-124  	Single Choice	Select Que-No:      Go to Question
+The primary purpose of CM is to
+Option-1:	Provide an organized, secured mechanism for project artifacts
+Option-2:	Provide task details for the project
+Option-3:	Provide risk and mitigation plans for the project
+Option-4:	Allocate the tasks to Team Members
+
+uestion No-125  	Single Choice	Select Que-No:      Go to Question
+Observe the below code snippet and complete the code which will ignore the first five elements, and prompt the rest.[Object Dumper is a class which will print the query] int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9}; var query = numbers.Take(5); ObjectDumper.Write(query); Console.Write("Press Enter key to see the other elements..."); Console.ReadLine(); var query2 = ________________ ObjectDumper.Write(query2);
+Option-1:	numbers.Skip(5);
+Option-2:	numbers.Take(5);
+Option-3:	numbers.TakeWhile(5);
+Option-4:	numbers.SkipWhile(5);
+
+Vaishnava wants to fetch data from SQL database using Entity Framework. Identify the provider which will help him to implement this functionality.
+Option-1:	Entity Client Data Provider
+Option-2:	.NET Framework Data Provider for Oracle
+Option-3:	.NET Framework Data Provider for SQL Server
+Option-4:	.NET Framework Data Provider for ODBC
+
+Vaishnava wants to fetch data from SQL database using Entity Framework. Identify the provider which will help him to implement this functionality.
+Option-1:	Entity Client Data Provider
+Option-2:	.NET Framework Data Provider for Oracle
+Option-3:	.NET Framework Data Provider for SQL Server
+Option-4:	.NET Framework Data Provider for ODBC
+
+Question No-128  	Single Choice	Select Que-No:      Go to Question
+Aggregation is indicated by ____________.
+Option-1:	Filled Diamond
+Option-2:	Hollow Diamond
+Option-3:	line and circle
+Option-4:	Circle and then Line
+
+Question No-129  	Multiple Choice	Select Que-No:      Go to Question
+Which of the following are not best practices of DevOps?
+Option-1:	No need to use Version Control
+Option-2:	Build should be self testing
+Option-3:	Keep the build slow
+Option-4:	Automate the Build
+
+Question No-130  	Single Choice	Select Que-No:      Go to Question
+State True or False 1.Route definitions start with URL pattern which specifies the pattern that the route will match 2.A URL pattern can contain literal values & variable placeholders which is referred to as a URL parameter.
+Option-1:	Statement1 is True Statement2 is False
+Option-2:	Statement1 is False Statement2 is False
+Option-3:	Statement1 is True Statement2 is True
+Option-4:	Statement1 is False Statement2 is True
+
+uestion No-131  	Single Choice	Select Que-No:      Go to Question
+Which of the following Event directives requires the ngModel directive to also be present in the page?
+Option-1:	ngClick
+Option-2:	ngView
+Option-3:	ngChange
+Option-4:	ngCheck
+
+Question No-132  	Single Choice	Select Que-No:      Go to Question
+A ______ is an uncertain event or condition that, if it occurs, has a positive or negative impact on a project's objectives.
+Option-1:	Defect
+Option-2:	Issue
+Option-3:	Risk
+Option-4:	Exception
+
+uestion No-133  	Single Choice	Select Que-No:      Go to Question
+At Capgemini we measure Customer's Satisfaction in the form of OTACE which stands for "On Time & At/ Above Client's Expectation". Organizational Baseline for OTACE is ________.
+Option-1:	< 3.5
+Option-2:	>= 3.5
+Option-3:	> 0
+Option-4:	<=5
+
+uestion No-134  	Single Choice	Select Que-No:      Go to Question
+Which of the option is valid with respect to the following statement? SELECT empno, sal FROM emp WHERE sal > ALL (1000 ,2000, 3000);
+Option-1:	The query would return all salaries greater than 3000
+Option-2:	The query would return all salaries greater than 1000
+Option-3:	The query would return all salaries greater than 2000
+Option-4:	This query is invalid
+
+uestion No-135  	Single Choice	Select Que-No:      Go to Question
+Seema wants to ensure that for all records which are inserted into the CustomerDetails. CustomerProducts table the amount to collect must be greater than 0. Existing records if any should not be affected by the constraint. Complete the following code snippet. ALTER TABLE CustomerDetails.CustomerProducts _____________________________ _____________________________ _____________________________ _____________________________ GO
+Option-1:	WITH NOCHECK ADD CONSTRAINT CK_CustProds_AmtCheck CHECK (AmountToCollect > 0)
+Option-2:	WITH NOCHECK ADD CONSTRAINT CK_CustProds_AmtCheck CHECK (AmountToCollect < 0)
+Option-3:	WITH CHECK ADD CONSTRAINT CK_CustProds_AmtCheck CHECK (AmountToCollect > 0)
+Option-4:	WITH CHECK ADD CONSTRAINT CK_CustProds_AmtCheck CHECK (AmountToCollect < 0)
+
+Question No-136  	Single Choice	Select Que-No:      Go to Question
+Following are the features of ___________ (Specifies the severity level) - Dynamically modifies the error message - Uses serverwide stored messages - May optionally log the error to the event log
+Option-1:	RAISEERROR
+Option-2:	THROW
+Option-3:	TRY/CATCH
+Option-4:	@ERROR
+
+Question No-137  	Single Choice	Select Que-No:      Go to Question
+__________ data type can be used when several tables must store the same type of data in a column and you have to make sure that these columns have identical data type, length, and nullability.
+Option-1:	Default
+Option-2:	Char
+Option-3:	Alias
+Option-4:	System Defined
+
+Question No-138  	Single Choice	Select Que-No:      Go to Question
+Identify the true or false statements: Statement 1:Unique index can be non clustered or clustered Statement 2:A table with a ColumnStore Index can be updated
+Option-1:	Statement 1 is true and Statement 2 is false
+Option-2:	Both are false
+Option-3:	Both are true
+Option-4:	Statement 1 is false and Statement 2 is true
+
+Question No-142  	Single Choice	Select Que-No:      Go to Question
+Which of the following is/are not valid Javascript DOM object(s)?
+Option-1:	Navigator
+Option-2:	Location
+Option-3:	Window
+Option-4:	Object
+
+Question No-143  	Single Choice	Select Que-No:      Go to Question
+Match the following: 1) * 2) #Data 3) .Data 4) :Data a) Pseudoclasses selector b) Universal Selector c) Id Selector d) Class Selector
+Option-1:	1-b, 2-c, 3-d, 4-a
+Option-2:	1-b, 2-d, 3-c, 4-a
+Option-3:	1-b, 2-c, 3-a, 4-d
+Option-4:	1-c, 2-b, 3-d, 4-a
+
+Question No-144  	Single Choice	Select Que-No:      Go to Question
+Which of the following statements are false w.r.t. XML? i) XML document can contain more than one root element. ii) XML tags are case sensitive. iii) XML document can contain empty elements. Iv) Every tag must be closed
+Option-1:	i & iv
+Option-2:	i & ii
+Option-3:	iii & iv
+Option-4:	ii & iii
+
+Question No-145  	Single Choice	Select Que-No:      Go to Question
+Identify the binding that is used for implementing features such as transactions,security and reliable messaging.
+Option-1:	netNamedPipeBinding
+Option-2:	netMsmqBinding
+Option-3:	wsHttpBinding
+Option-4:	netTcpBinding
+
+Question No-147  	Multiple Choice	Select Que-No:      Go to Question
+Which of the following properties are used in Element to Element Binding in WPF?
+Option-1:	ElementName
+Option-2:	Path
+Option-3:	Source
+Option-4:	Target
+Question No-150  	Single Choice	Select Que-No:      Go to Question
+State True or False. Statement 1: In WPF,the event handlers can be assigned both in code behind and in XAML. Statement 2: Routed events can travel up or down the logical and visual tree.
+Option-1:	Statement1 is True Statement2 is True
+Option-2:	Statement1 is True Statement2 is False
+Option-3:	Statement1 is False Statement2 is False
+Option-4:	Statement1 is False Statement2 is True
+
+uestion No-152  	Single Choice	Select Que-No:      Go to Question
+Which of the following CSS3 property is used to change the text in uppercase?
+Option-1:	text-decoration
+Option-2:	text-indent
+Option-3:	text-transform
+Option-4:	word-wrap
+
+Question No-153  	Single Choice	Select Que-No:      Go to Question
+Which of the following JavaScript function will display dialog box that presents a message to the user with a single OK button to dismiss the dialog box?
+Option-1:	alert()
+Option-2:	confirm()
+Option-3:	prompt()
+Option-4:	message()
+
+Question No-154  	Single Choice	Select Que-No:      Go to Question
+Which of the event handlers are not supported in button objects?
+Option-1:	OnClick
+Option-2:	OnChange
+Option-3:	OnMouseUp
+Option-4:	OnMouseDown
+ 	Previous    
+
+Question No-155  	Single Choice	Select Que-No:      Go to Question
+Which of the following is valid XML Element name?
+Option-1:	_Book
+Option-2:	01Book
+Option-3:	@Book
+Option-4:	.Book
+
+uestion No-157  	Single Choice	Select Que-No:      Go to Question
+Sudha has multiple tables, in which she would like to use Phone Number column. She wants that in every table this column should have identical datatype, length and nullability. Which of the following data type she should use?
+Option-1:	VARCHAR
+Option-2:	XML
+Option-3:	User Defined Data Type
+Option-4:	TABLE
+
+Question No-158  	Single Choice	Select Que-No:      Go to Question
+Kshitija has two tables Customer (CustomerID, CustomerName, City) and Order (OrderID, CustomerID, OrderPrice). She would like to retrieve name of all customer with order details who stays in city "Pune" or "Mumbai" or "Hyderabad". Which of the following query will give the correct result?
+Option-1:	SELECT c.CustomerName, c.City, o.OrderID, o.OrderPrice FROM Customer c INNER JOIN Order o ON c.CustomerID = o.CustomerID WHERE c.City IN ('Pune', 'Mumbai', 'Hyderabad')
+Option-2:	SELECT c.CustomerName, c.City, o.OrderID, o.OrderPrice FROM Customer c INNER JOIN Order o ON c.CustomerID = o.CustomerID WHERE c.City NOT IN ('Pune', 'Mumbai', 'Hyderabad')
+Option-3:	SELECT c.CustomerName, c.City, o.OrderID, o.OrderPrice FROM Customer c INNER JOIN Order o ON c.CustomerID = o.CustomerID WHERE c.City BETWEEN ('Pune', 'Mumbai', 'Hyderabad')
+Option-4:	SELECT c.CustomerName, c.City, o.OrderID, o.OrderPrice FROM Customer c INNER JOIN Order o ON c.CustomerID = o.CustomerID WHERE c.City NOT BETWEEN ('Pune', 'Mumbai', 'Hyderabad')
+
+Question No-159  	Single Choice	Select Que-No:      Go to Question
+Ajay has Employee table with fields EmployeeID, EmployeeName, Salary, DepartmentID. Ajay would like to increase salary of all employees by 5% who are working in Department 10. Which of the following is correct query for the same?
+Option-1:	UPDATE Employee SET Salary = Salary * 0.05 WHERE DepartmentID = 10
+Option-2:	UPDATE Employee SET Salary = Salary * 0.05
+Option-3:	UPDATE Employee SET Salary = Salary + Salary * 0.05 WHERE DepartmentID = 10
+Option-4:	UPDATE Employee SET Salary = Salary + Salary * 0.05
+
+Question No-161  	Single Choice	Select Que-No:      Go to Question
+Which of the following index, if created on table, table will not be updatable?
+Option-1:	ColumnStore Index
+Option-2:	NonClustered Index
+Option-3:	Clustered Index
+Option-4:	Filtered Index
+
+Question No-162  	Single Choice	Select Que-No:      Go to Question
+Which of the following is true about constructor?
+Option-1:	Constructor name is same as class name
+Option-2:	Constructors should be parameterized
+Option-3:	Construtors have return type
+Option-4:	Constructor can be very useful for closing activities
+
+Question No-163  	Single Choice	Select Que-No:      Go to Question
+Notations of a Acivity Diagram include:
+Option-1:	LifeLine
+Option-2:	Stick Figure
+Option-3:	Use Case
+Option-4:	Swim lanes
+
+Question No-164  	Single Choice	Select Que-No:      Go to Question
+The common language runtime provides a XXXX environment that manages code targeting the .NET Framework.
+Option-1:	code-execution
+Option-2:	compilation
+Option-3:	coding
+Option-4:	debugging
+
+Question No-165  	Single Choice	Select Que-No:      Go to Question
+Which of the following component provides metadata management and loads classes?
+Option-1:	Code Manager
+Option-2:	Class Loader
+Option-3:	Garbage Collector
+Option-4:	Exception Manager
+
+Question No-166  	Multiple Choice	Select Que-No:      Go to Question
+The .NET platform was introduced to offer a much more XXXX, more XXXX and XXXX programming model than COM
+Option-1:	powerful
+Option-2:	flexible
+Option-3:	simpler
+Option-4:	complex
+
+Question No-167  	Single Choice	Select Que-No:      Go to Question
+Choose the correct code snippet at Line no 04, so that you will get below output : Size : 32767 01 static void Main(string[] args) 02 { 03 int size; 04 XXXX 05 Console.WriteLine("Size : " + size); 06 }
+Option-1:	size = Int16.MaxValue;
+Option-2:	size = Int32.MaxValue;
+Option-3:	size = Bit.MaxValue;
+Option-4:	size = Char.MaxValue;
+
+Question No-168  	Single Choice	Select Que-No:      Go to Question
+Which of the following is the correct representation of annonymous type?
+Option-1:	var sales = new{Year = 2012, Amount = 20000m}
+Option-2:	var sales = new Sales(){Year = 2012, Amount = 20000m}
+Option-3:	var sales = {Year = 2012, Amount = 20000m}
+Option-4:	var sales = Sales(){Year = 2012, Amount = 20000m}
+
+Question No-169  	Single Choice	Select Que-No:      Go to Question
+Which of the following statement/s is/are true? 1: Hashtable represents a dictionary of associated keys and value. 2: Hashtable provides a faster way of storage and retrieval of items of the object type.
+Option-1:	Statement 1 is true but statement 2 is false
+Option-2:	Statement 2 is true but statement 1 is false
+Option-3:	Both statements are true
+Option-4:	Both statements are false
+
+Question No-168  	Single Choice	Select Que-No:      Go to Question
+Which of the following is the correct representation of annonymous type?
+Option-1:	var sales = new{Year = 2012, Amount = 20000m}
+Option-2:	var sales = new Sales(){Year = 2012, Amount = 20000m}
+Option-3:	var sales = {Year = 2012, Amount = 20000m}
+Option-4:	var sales = Sales(){Year = 2012, Amount = 20000m}
+
+
+Question No-170  	Single Choice	Select Que-No:      Go to Question
+Choose the correct code snippet, so that you will get below output : Power of 2 ^ 3 is : 8 public delegate double MathDelegate(double num1, double num2); public static void Main() { MathDelegate del = XXXX; Console.WriteLine("Power of 2 ^ 3 is : " + del(2, 3)); }
+Option-1:	(num1, num2) => { return Math.Pow(num1, num2); }
+Option-2:	() => { double power = Math.Pow(num1, num2); }
+Option-3:	() => { return Math.Pow(num1, num2); }
+Option-4:	(num1, num2) => { double power = Math.Pow(num1, num2); }
+
+Question No-171  	Single Choice	Select Que-No:      Go to Question
+Which of the following statement/s is/are true? 1 : The event delegate defines the return type and signature for the event 2 : Event handler method is added using += operator, and removed using -= operator
+Option-1:	Statement 1 is true but statement 2 is false
+Option-2:	Statement 2 is true but statement 1 is false
+Option-3:	Both statements are true
+Option-4:	Both statements are false
+
+Question No-172  	Single Choice	Select Que-No:      Go to Question
+To invoke Dispose method, you need to implement ______.
+Option-1:	IDispose
+Option-2:	Object
+Option-3:	IDisposable
+Option-4:	IFinalize
+
+uestion No-173  	Single Choice	Select Que-No:      Go to Question
+Following are the feature of ______. - The compiler will generate a unique hash code based on the contents of the entire assembly - This hash code is combined with the private key data within the *.snk file to yield the digital signature embedded within the assembly's CLR header data
+Option-1:	Strong Name
+Option-2:	Global Assembly Cache
+Option-3:	Private Assembly
+Option-4:	Assembly Manifest
+
+uestion No-174  	Single Choice	Select Que-No:      Go to Question
+Radha has created an application with connected architecture. She has executed the command and retrieved the result in SqlDataReader object. Before proceeding she would like to check that whether the SqlDataReader object contains data. Which of the following property will achieve the same?
+Option-1:	ContainsRow
+Option-2:	HasRows
+Option-3:	ContainsData
+Option-4:	HasData
+
+Question No-175  	Single Choice	Select Que-No:      Go to Question
+Sonakshi is creating Employee Management System with disconnected architecture. She is retrieving data from SqlDataAdapter daEmp into DataSet ds, but while retrieving data she would like to retrive schema information also. Choose the correct code snippet in the below code : SqlConnection con = new SqlConnection("Data Source=NDAMSSQL; Database=Training; uid=sqluser; pwd=sqluser"); SqlDataAdapter daEmp = new SqlDataAdapter("SELECT * FROM Employee", con); Data ds = new DataSet(); ____________.
+Option-1:	daEmp.FillSchema(ds, "Emp");
+Option-2:	daEmp.Fill(ds, "Emp");
+Option-3:	ds.FillSchema(daEmp, "Emp");
+Option-4:	da.Fill(daEmp, "Emp");
+
+Question No-176  	Single Choice	Select Que-No:      Go to Question
+Which of the following property indicates whether the row belongs to a table?
+Option-1:	Row
+Option-2:	HasRows
+Option-3:	ContainsRow
+Option-4:	RowState
+
+Question No-177  	Single Choice	Select Que-No:      Go to Question
+Which of the following statement/s is/are true? 1 : A DataView enables to create different views of the data stored in a DataTable 2 : Using a DataView, table data can be exposed with different sort orders, and user can filter the data by row state or based on a filter expression
+Option-1:	Statement 1 is true but statement 2 is false
+Option-2:	Statement 2 is true but statement 1 is false
+Option-3:	Both statements are true
+Option-4:	Both statements are false
+
+Question No-178  	Single Choice	Select Que-No:      Go to Question
+Manavi has Customer details in Customer.xml file. She would like to store this Customer data in the data set object. For the same she has written following code. Choose the correct code snippet to complete the code. StreamReader reader = new StreamReader(@"D:\Customer.xml"); DataSet ds = new DataSet(); ____________ sr.Close();
+Option-1:	ds.ReadXml(reader);
+Option-2:	ds.GetXml(reader);
+Option-3:	ds.WriteXml(reader);
+Option-4:	ds.GetXmlSchema(reader);
+
+Question No-179  	Single Choice	Select Que-No:      Go to Question
+Meena would like to create user interface in WPF application. In this application she would like to allow explicit positioning of controls. Which of the following layout she should use?
+Option-1:	StackPanel
+Option-2:	Canvas
+Option-3:	WrapPanel
+Option-4:	Grid
+
+uestion No-180  	Single Choice	Select Que-No:      Go to Question
+Smriti is creating WPF application. In which she would llike to use style as resources for all windows. Where she should define the style, so that it is applicable to all windows?
+Option-1:	In Windows Resources
+Option-2:	In Layout Resource
+Option-3:	In app.xaml
+Option-4:	In app.config
+
+Question No-181  	Single Choice	Select Que-No:      Go to Question
+The following code has been written: private static void RetrieveEvenNumbers() { int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9}; int[] moreNumbers = {6, 7, 4, 10}; } Based on the above code, identify the correct code snippet to extract common numbers from both array.
+Option-1:	var query = numbers.Intersect(moreNumbers)
+Option-2:	var query = numbers.Union(moreNumbers)
+Option-3:	var query = numbers.Except(moreNumbers)
+Option-4:	var query = numbers.Contact(moreNumbers)
+
+Question No-182  	Single Choice	Select Que-No:      Go to Question
+Which of the following allows to perform query operation on Sql, DataSet and Entities?
+Option-1:	LINQ to Objects
+Option-2:	LINQ to ADO.NET
+Option-3:	LINQ to XML
+Option-4:	Parallel LINQ
+
+Question No-183  	Single Choice	Select Que-No:      Go to Question
+Rishika has following code :
+This is paragraph 1
+
+.NET
+Java
+In this div, she would like add the button after list. Which of the following is the correct way to do the same using jQuery?
+Option-1:	$("#target").append("Click Me");
+Option-2:	$("#target").prepend("Click Me");
+Option-3:	$("#target").insert("Click Me");
+Option-4:	$("#target").insertLast("Click Me");
+
+uestion No-184  	Single Choice	Select Que-No:      Go to Question
+Which of the following statement is true with respect to Angular JS Services? Statement 1 : Services provides a method to keep data around application for the lifetime and communicate across controllers in a consistent manner Statement 2 : Services are singleton objects that are instantiated only once per application by the $injector
+Option-1:	Statement 1 is true but statement 2 is false
+Option-2:	Statement 2 is true but statement 1 is false
+Option-3:	Both statements are true
+Option-4:	Both statements are false
+
+Question No-185  	Single Choice	Select Que-No:      Go to Question
+Shiksha has DropDownList named ddlCity on Home.aspx. She is adding cities in ddlCity from C# code as below. protected void Page_Load(object sender, EventArgs e) { ddlCity.Items.Add("Pune"); ddlCity.Items.Add("Mumbai"); } The DropDownList is populated with cities, but in subsequent request the data is again and again populated. She would like to correct the code, so that data should be populated only first time. Which of the following code will do that?
+Option-1:	protected void Page_Load(object sender, EventArgs e) { if (!Page.IsPostBack) { ddlCity.Items.Add("Pune"); ddlCity.Items.Add("Mumbai"); } }
+Option-2:	protected void Page_Load(object sender, EventArgs e) { if (Page.IsPostBack) { ddlCity.Items.Add("Pune"); ddlCity.Items.Add("Mumbai"); } }
+Option-3:	protected void Page_Load(object sender, EventArgs e) { if (!Page.PostBack) { ddlCity.Items.Add("Pune"); ddlCity.Items.Add("Mumbai"); } }
+Option-4:	protected void Page_Load(object sender, EventArgs e) { if (Page.PostBack) { ddlCity.Items.Add("Pune"); ddlCity.Items.Add("Mumbai"); } }
+
+Question No-186  	Single Choice	Select Que-No:      Go to Question
+Vidisha has Customer Name Textbox on the Customer.aspx. She would like to validate customer name, that it should have only alphabets. Which of the following validation control you will suggest to her?
+Option-1:	ValidationSummary
+Option-2:	RequiredFieldValidator
+Option-3:	CompareValidator
+Option-4:	RegularExpressionValidator
+
+Question No-189  	Single Choice	Select Que-No:      Go to Question
+Ridhima would like to develop Hospital Management System Website. In this website, all pages will have common header at top, Hyperlinks on the left and a footer at bottom. How she will achieve the same?
+Option-1:	User Controls
+Option-2:	Master Pages
+Option-3:	Themes
+Option-4:	Web Controls
+
+Question No-187  	Single Choice	Select Que-No:      Go to Question
+_______ controls have the capability to resolve human-readable display names to real URLs to which HTTP requests may be sent.
+Option-1:	Navigation
+Option-2:	User
+Option-3:	HTML
+Option-4:	Validation
+
+Question No-188  	Single Choice	Select Que-No:      Go to Question
+______ are places in the code, where debugger will stop the execution of the application.
+Option-1:	Steps
+Option-2:	Debugger
+Option-3:	Breakpoints
+Option-4:	Data Points
+
+Question No-189  	Single Choice	Select Que-No:      Go to Question
+Ridhima would like to develop Hospital Management System Website. In this website, all pages will have common header at top, Hyperlinks on the left and a footer at bottom. How she will achieve the same?
+Option-1:	User Controls
+Option-2:	Master Pages
+Option-3:	Themes
+Option-4:	Web Controls
+
+Question No-190  	Single Choice	Select Que-No:      Go to Question
+Jyoti has Login Page in her web application. Once user has provided correct username and password, user should be redirected to Home Page with user name. For the same she has written below code : Response.Redirect("Home.aspx?name=" + txtUserName.Text); Now She would like to display username on Home Page. Which of the following code will help her to display user name on label?
+Option-1:	lblUserName.Text = Request.QueryString["name"];
+Option-2:	lblUserName.Text = Response.QueryString["name"];
+Option-3:	lblUserName.Text = Request.Cookies["name"];
+Option-4:	lblUserName.Text = Response.Cookies["name"];
+
+Question No-191  	Single Choice	Select Que-No:      Go to Question
+During Postaback, ASP.NET restores the values in a hidden form field called _________.
+Option-1:	Text
+Option-2:	_ViewState
+Option-3:	Value
+Option-4:	Mode
+
+Question No-192  	Single Choice	Select Que-No:      Go to Question
+Which of the following is not limitation of Cookies?
+Option-1:	Cookies which are stored on client computer has limited size
+Option-2:	If user disable cookies, then ASP.NET application cannot store cookies on client computer
+Option-3:	No server resource is involved in maintaining the cookie
+Option-4:	Users can tamper with cookies
+
+Question No-193  	Single Choice	Select Que-No:      Go to Question
+Which of the following is not disadvantage of AJAX?
+Option-1:	It has issue with Back button
+Option-2:	It poses difficulty to bookmark a particular state of page
+Option-3:	It can be used to create rich, web-based application
+Option-4:	There is a lack of a standard body behind AJAX
+
+Question No-194  	Single Choice	Select Que-No:      Go to Question
+Which of the following is the correct representation of razor view?
+Option-1:	<%foreach (string cities in cityList) {
+@cities
+}%>
+Option-2:	foreach (string cities in cityList) {
+cities
+}
+Option-3:	#foreach (string cities in cityList) {
+#cities
+}
+Option-4:	@foreach (string cities in cityList) {
+@cities
+}
+
+Question No-195  	Single Choice	Select Que-No:      Go to Question
+Minakshi has created Account controller. In which she would like to redirect from Index action to Withdraw action. Which of the following method will help her for redirection?
+Option-1:	Redirect("Withdraw", "Account");
+Option-2:	RedirectToAction("Withdraw", "Account");
+Option-3:	RedirectToUrl("Withdraw", "Account");
+Option-4:	RedirectResult("Withdraw", "Account");
+
+Question No-196  	Single Choice	Select Que-No:      Go to Question
+Which of the following statement is true? Statement 1 : Data validation can be easily applied to ASP.NET MVC models by using Data Annotation attribute Statement 2 : Bundling is the process of concatenating multiple files into a single download whereas minification is the process of making the download as small as possible
+Option-1:	Statement 1 is true but statement 2 is false
+Option-2:	Statement 2 is true but statement 1 is false
+Option-3:	Both statements are true
+Option-4:	Both statements are false
+
+uestion No-197  	Single Choice	Select Que-No:      Go to Question
+Anisha has created ASP.NET Web API application. She has written Home controller. In which she has written Display method. Anisha wants that, Display method should not be accessible through URL. Which of the following attribute she should use for Display method?
+Option-1:	[NotAction]
+Option-2:	[NoNAction]
+Option-3:	[NoNUrl]
+Option-4:	[ActionName]
+
+Question No-198  	Single Choice	Select Que-No:      Go to Question
+Which of the following attribute is used to define method that will be supported by services in WCF?
+Option-1:	[DataContract]
+Option-2:	[OperationContract]
+Option-3:	[ServiceContract]
+Option-4:	[DataMember]
+
+
+uestion No-199  	Single Choice	Select Que-No:      Go to Question
+Which of the following statement is wrong with respect to WCF?
+Option-1:	In WCF, binding describes how a service communicates with the outside world
+Option-2:	WCF service consists of one or more endpoints
+Option-3:	WCF service consists of only one endpoint
+Option-4:	WCF service endpoints are exposed through addresses
+
+Question No-200  	Single Choice	Select Que-No:      Go to Question
+Which of the following is not correct about Team Foundation Version Control (TFVC)?
+Option-1:	TFVC is a centralized version control system
+Option-2:	TFVC cannot maintain historical data on server
+Option-3:	TFVC changes are audited easily
+Option-4:	TFVC lets you apply granular permissions and restrict access down to a file level
+
+Question No-202  	Single Choice	Select Que-No:      Go to Question
+Manisha got requirement which is well know and is more or less permanent. Which of the following SDLC Model Manisha should use?
+Option-1:	V Model
+Option-2:	Iterator Model
+Option-3:	Waterfall Model
+Option-4:	Agile Model
+
+
+Question No-203  	Single Choice	Select Que-No:      Go to Question
+Quick Fix Model is used in which phase of SDLC?
+Option-1:	Testing Phase
+Option-2:	Development Phase
+Option-3:	Design Phase
+Option-4:	Maintainance Phase
+
+Question No-204  	Single Choice	Select Que-No:      Go to Question
+Unplanned interruption to a service, a reduction in the quality of a service called as ______.
+Option-1:	Incident
+Option-2:	Problem
+Option-3:	Issue
+Option-4:	Defect
+
+Question No-205  	Single Choice	Select Que-No:      Go to Question
+ISO stands for ___________.
+Option-1:	Industry Organization for Standardization
+Option-2:	International Organization for Standardization
+Option-3:	International Organization for System
+Option-4:	Indian Organization for Standardization
+
+Question No-206  	Single Choice	Select Que-No:      Go to Question
+Jessica is creating a Ado.Net application and her database is in Sql Server. For her InsertCustomerDetails stored procedure she needs to define an Input parameter for CustomerID. Which of the following class she should use to create CustomerID Parameter?
+Option-1:	SqlParameter
+Option-2:	OleDbParameter
+Option-3:	OdbcParameter
+Option-4:	OracleParameter
+
+Question No-207  	Single Choice	Select Que-No:      Go to Question
+Identify True or False statement: 1: HasRows reads the data from the datareader. 2: FieldCount retrieves the number of column in current row.
+Option-1:	Both are True
+Option-2:	Both are False
+Option-3:	Statement 1 is True and Statement 2 is False
+Option-4:	Statement 1 is False and Statement 2 is True
+
+Question No-208  	Single Choice	Select Que-No:      Go to Question
+Tom is creating a Product Management System. He wants to auto generate the product id. Which of the following code he should use? Considering connection and command object are already created.
+Option-1:	cmd.CommandText="Select Max(ProductID) from Products"; int id=(int)cmd.ExecuteScalar(); id = id +1;
+Option-2:	cmd.CommandText="Select Max(ProductID) from Products"; int id=cmd.ExecuteScalar(); id = id +1;
+Option-3:	cmd.CommandText="Select Min(ProductID) from Products"; int id=(int)cmd.ExecuteScalar(); id = id +1;
+Option-4:	cmd.Text="Select Max(ProductID) from Products"; int id=(int)cmd.ExecuteScalar(); id = id +1;
+
+uestion No-209  	Multiple Choice	Select Que-No:      Go to Question
+Which of the following types of Transaction is Supported in .Net?
+Option-1:	Local
+Option-2:	Intranet
+Option-3:	Distributed
+Option-4:	Mobile
+
+Question No-210  	Single Choice	Select Que-No:      Go to Question
+Which of the following provides mechanism to browse parent and child rows in a DataSet ?
+Option-1:	Unique Key
+Option-2:	Primary Key
+Option-3:	Data Relation
+Option-4:	Data Row
+
+Question No-211  	Single Choice	Select Que-No:      Go to Question
+Sushant has created a dataset names dsEmployee, he wants to write the schema of the dataset along with the data. Which of the following method he should use?
+Option-1:	Fill()
+Option-2:	FillSchema()
+Option-3:	Write()
+Option-4:	WriteSchema()
+
+uestion No-212  	Single Choice	Select Que-No:      Go to Question
+Nitish has created a Customer Management System, he wants to display all the customers belonging to USA using Data View. Which of the following code snippet you would recommend him?
+Option-1:	DataView dv= new DataView(ds.Tables["cust"]); dv.RowFilter= "Region =USA";
+Option-2:	DataView dv= new DataView(ds.Tables["cust"]); dv.RowFilter= "Region ='USA'";
+Option-3:	DataView dv= ds.Tables["cust"]; dv.RowFilter= "Region ='USA'";
+Option-4:	DataView dv= new DataView(ds.LoadTables["cust"]); dv.RowFilter= "Region ='USA'";
+
+uestion No-213  	Single Choice	Select Que-No:      Go to Question
+Ajinkey wants to read data from a XML file in a fast and forward mode. Which of the following class he should use?
+Option-1:	XMLNode
+Option-2:	XMLDocument
+Option-3:	XMLNodeReader
+Option-4:	XMLNodeList
